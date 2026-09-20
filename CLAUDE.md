@@ -81,38 +81,21 @@ npm run start   # 本地起生产服务
 
 ## 当前状态
 
-- 2026-09-11：框架层与配置层完成并通过验收（三种页型可访问、H1 唯一、
-  title/description 齐、sitemap 自动收录、空分类返回 404、缺 sources 构建失败、
-  丢入新 MDX 自动出路由）
-- 2026-09-13：主词已选定 —— **Garden Tower Defense**（Roblox），域名
-  `gardentowerdefenseguide.wiki`，详见知识库 `Claude\项目\出海游戏热词站_交接文档.md`
-  和 `候选词判断表_2026-09-11.md`
-- `config/site.config.ts` 已按 Garden Tower Defense 换壳完成（16 个分类、主题色、
-  首页文案均基于已核实事实）
-- `content/en/` 下 16 个分类全部完成，每篇都有 `sources` 且通过构建校验；对应的
-  原始调研留档在 `materials/<分类>/*.md`（不参与构建，人工核对用）
-- 新增共享数据文件 `materials/_units-data.md`：跨分类复用的已核实单位数据池，
-  目前 10 个单位（7 个当前可获得 + 3 个已下架仅供参考），避免多篇文章重复引用
-  同一小批单位造成"重复内容"观感。是否要扩到 20-30 个规模、并给每篇排名页
-  再加一个非 Fandom 来源（实测视频/交易市场数据）交叉验证——留待用户决定，
-  不是强制项
-- 已 `git init` 并提交（commit `770d5af`），尚未部署上线
-- 排名类硬规矩已从"禁做 tier list/best build"修订为"禁的是无出处的排名断言"，
-  见上方"硬规矩"一节第二条
-- 2026-09-14：视觉改版上线（配色、图片、隐私/条款页、表格修复），content/en/ 全部
-  待确认已译英文；新增 `ops/fleet-status.json` —— 云端定时任务`游戏站舰队巡检`的数据源，
-  每 3 天自动查收录/复盘节点/兑换码新鲜度，不需要登录。**多站扩展方式：新站上线在这个
-  JSON 的 `sites` 数组加一条同结构记录即可，不要新建任务。** 详见知识库
-  `Claude\项目\游戏站矩阵.md` 和交接文档
-- 2026-09-17：看了三个竞品站（mansiontycoon.wiki 商业化 fan wiki、craftfood.gg 数据
-  工具站、Expedition Antarctica 的 Fandom 社区 wiki）后，框架层加了一处通用改进——
-  `start.cards`（首页"从这里开始"卡片）新增可选字段 `subLinks`（`config/site.config.ts`
-  的 `StartCard` 类型），仿照对手站"卡片下面列 2-3 个具体子话题 + View all"的做法，
-  给用户和 Google 更多具体入口。**不填就是老样式，不强制每张卡片都加**，GTD/King of
-  Jade 两个已上线站没有改配置，本身不受影响，已跑 `npm run build` + 本地浏览器验证
-  首页渲染正常。第三站及以后配置 `start.cards` 时可以考虑加上。
-  同时确认 `aboutGame.stats` 这个已有字段（本来就是"Quick Facts"性质的信息块，不是
-  新东西）还可以再补全——对手站的 Quick Facts 表格常见字段是 Developer/Platform/
-  Released/Genre/Price，GTD 当前 `aboutGame.stats` 只填了 Developer/Platform/Genre 三项，
-  少了 Released（发售日期）和 Price（价格），新站配置时记得把这两项也填上，不是必须
-  但比现在完整。
+**本仓库是第 4 个站：Street Life Remastered Wiki**（Roblox），由模板复制而来，模板本身在
+`game-wiki-template`。上面的规则全部沿用，下面只写这个站自己的状态。
+
+- 域名 `streetliferemastered.wiki`，仓库 `Fenghuang-huoyan/street-life-remastered-guide`（公开），
+  Vercel 项目 `street-life-remastered-guide`，已连 GitHub，推送 `main` 自动部署。
+- 上线 2026-09-20。DNS 为双 A 记录 `216.198.79.1` + `64.29.17.1`。
+- GA 衡量 ID `G-GQPY9T83Z5`，通过 Vercel 环境变量 `NEXT_PUBLIC_GA_ID` 注入。
+- GSC：网址前缀资源，HTML 文件验证（`public/googlecd0c2023df974c23.html`，各站通用，不要删）。
+- 内容 9 页（`content/en/<分类>/`）：guide、money、robberies、gangs、guns、cars、achievements、
+  admin、codes。每页都有 `sources`，玩法数字来自读过字幕的 YouTube 实测视频（页内标了视频标题和
+  日期）、Roblox 官方 API 和一家第三方兑换码追踪站。
+- 兑换码页如实写"没有官方可兑换码"，不许编码。管理员页不写具体命令写法（没读到），标待确认。
+- **不做**：cheats / script / 外挂类内容。**没做**：准星、职业两类页面（没有读过的可靠来源）。
+- 图片：官方 API 只有 6 张宣传图加游戏图标，全部自托管在 `public/images/official/`，
+  Badges、Admin、Codes 三类共用游戏图标，不硬凑无关图。
+- 更新内容时注意：玩法数字会随游戏更新变化，改数字必须同时改页内的视频日期和 `updated`。
+
+相关记录见知识库 `Claude\项目\出海游戏热词站_第4站交接_2026-09-19.md` 和 `游戏站矩阵.md`。
