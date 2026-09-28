@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { site } from "@/config/site.config";
 import { getDocsByCategory, getNavCategories, categoryLabel, categoryImageFit } from "@/lib/content";
+import { AdBanner } from "@/components/AdBanner";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -58,6 +59,7 @@ export default async function CategoryPage({ params }: Props) {
           </li>
         ))}
       </ul>
+      <AdBanner />
     </main>
   );
 }

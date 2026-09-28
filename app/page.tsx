@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/config/site.config";
+import { AdBanner } from "@/components/AdBanner";
 
 /** 首页承接主游戏词。区块顺序对齐手册关卡 3 的结构：hero / start / aboutGame / finalCta。 */
 export default function Home() {
@@ -58,6 +59,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <AdBanner />
 
       <section className="py-10">
         <h2 className="text-3xl font-bold">{aboutGame.title}</h2>
