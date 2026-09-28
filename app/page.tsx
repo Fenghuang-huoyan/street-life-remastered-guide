@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/config/site.config";
+import { JsonLd, websiteSchema } from "@/components/JsonLd";
 import { AdBanner } from "@/components/AdBanner";
 
 /** 首页承接主游戏词。区块顺序对齐手册关卡 3 的结构：hero / start / aboutGame / finalCta。 */
@@ -8,6 +9,7 @@ export default function Home() {
   const { hero, start, aboutGame, finalCta } = site;
   return (
     <main className="mx-auto max-w-5xl px-4">
+      <JsonLd data={websiteSchema()} />
       {/* 首屏：官方宣传图做背景 + 渐变遮罩保证文字可读 */}
       <section className="relative -mx-4 overflow-hidden sm:mx-0 sm:mt-6 sm:rounded-3xl">
         <Image src={hero.image.src} alt={hero.image.alt} fill priority sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover" />

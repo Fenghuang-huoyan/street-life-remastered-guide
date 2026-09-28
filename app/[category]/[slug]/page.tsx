@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { site } from "@/config/site.config";
 import { getAllDocs, getDoc, categoryLabel } from "@/lib/content";
 import { AdBanner } from "@/components/AdBanner";
+import { JsonLd, articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -32,6 +33,14 @@ export default async function DocPage({ params }: Props) {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
+      <JsonLd data={articleSchema(doc)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: site.siteName, path: "/" },
+          { name: categoryLabel(doc.category), path: `/${doc.category}` },
+          { name: doc.title, path: `/${doc.category}/${doc.slug}` },
+        ])}
+      />
       <nav className="text-sm text-[hsl(var(--muted))]">
         <Link href="/" className="hover:underline">{site.siteName}</Link>
         {" / "}
