@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { title: site.meta.title, description: site.meta.description, url: site.baseUrl, siteName: site.siteName, type: "website", images: [site.hero.image.src] },
   icons: { apple: site.logo },
+  // Adsterra 域名所有权验证码（客服 Johanna 于 2026-09-28 要求插入首页源码以认领域名）。
+  // 认领完成后可删除。
+  other: { "adsterra-site-verification": "alT7gDXV51h52" },
 };
 
 /** 主题色集中在配置层，这里转成 CSS 变量（camelCase 键 → --kebab-case），代码里不写死任何颜色。 */
