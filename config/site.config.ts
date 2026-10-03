@@ -131,7 +131,7 @@ export const site = {
     title: "What is Street Life Remastered?",
     paragraphs: [
       "Street Life Remastered is a free Roblox open-world role-playing game by flipsy's games. The official description lists robbing banks and houses, joining the police, taking over turfs with a faction, hunting for weapons and cash, a music studio, a gym, apartments, exotic cars and in-game crypto trading.",
-      "It launched on October 27, 2024 and was last updated by the developer on September 18, 2026. Servers hold up to 35 players, and owners of private servers get admin rights inside them, per the official description.",
+      "It launched on October 27, 2024 and the Roblox Games API reports a developer update on October 3, 2026 (checked October 3). Servers hold up to 35 players, and owners of private servers get admin rights inside them, per the official description.",
     ],
     stats: [
       { label: "Developer", value: "flipsy's games" },

@@ -22,6 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: doc.title,
     description: doc.description,
     alternates: { canonical: `/${category}/${slug}` },
+    openGraph: {
+      title: doc.title, description: doc.description,
+      url: `${site.baseUrl}/${category}/${slug}`, type: "article",
+      siteName: site.siteName, images: [site.categories.find((entry) => entry.slug === category)?.image ?? site.hero.image.src],
+      ...(doc.updated ? { modifiedTime: doc.updated } : {}),
+    },
+    twitter: { card: "summary_large_image", title: doc.title,
+      description: doc.description, images: [site.categories.find((entry) => entry.slug === category)?.image ?? site.hero.image.src] },
   };
 }
 
