@@ -1,14 +1,22 @@
 ---
 title: "Street Life Remastered Codes"
-description: "Street Life Remastered codes status: no confirmed redeemable codes. Asset-ID vs code table, free reward steps (group / playtime / wheel / airdrop), and how this page updates when a real code appears."
+description: "Street Life Remastered codes checked 2026-11-18: no working code and no expired code on record. Official description, events, and trackers, plus free rewards that are not codes."
 keyword: "street life remastered codes"
-updated: "2026-10-23"
+updated: "2026-11-18"
 sources:
-  - label: "Earnaldo, Street Life Remastered Codes (verified Sep 3, 2026; updated Sep 14, 2026)"
-    url: "https://earnaldo.com/blog/street-life-remastered-codes"
-  - label: "Roblox Games API: Street Life Remastered (universe 6726637224), read 2026-09-19"
+  - label: "Roblox Games API: Street Life Remastered (universe 6726637224), read 2026-11-18; experience updated 2026-11-17T01:23:21.08Z"
     url: "https://games.roblox.com/v1/games?universeIds=6726637224"
-  - label: "Roblox Badges API: Street Life Remastered badge list, read 2026-09-19"
+  - label: "Roblox virtual events API: Street Life Remastered (universe 6726637224), 16 events, read 2026-11-18"
+    url: "https://apis.roblox.com/virtual-events/v1/universes/6726637224/virtual-events?limit=100"
+  - label: "Roblox Groups API: flipsy's games (group 16660065), shout read 2026-11-18"
+    url: "https://groups.roblox.com/v1/groups/16660065"
+  - label: "Earnaldo, Street Life Remastered Codes, last checked 2026-11-10 (zero active, none expired on record)"
+    url: "https://earnaldo.com/blog/street-life-remastered-codes"
+  - label: "RBX Radar, Street Life Remastered Codes, updated 2026-11-18 (0 active; followed since 2026-10-29)"
+    url: "https://rbxradar.com/codes/street-life-remastered"
+  - label: "UrGameTips, Are There Any Street Life Remastered Codes?, updated 2026-11-05"
+    url: "https://urgametips.com/street-life-remastered-codes/"
+  - label: "Roblox Badges API: Street Life Remastered badge list, read 2026-11-18 (13 badges, none a code redeem)"
     url: "https://badges.roblox.com/v1/universes/6726637224/badges?limit=100&sortOrder=Asc"
   - label: "Mix, 'How to Make $2,000,000 in STREET LIFE REMASTERED (Roblox)' (YouTube, 2026-08-16)"
     url: "https://www.youtube.com/watch?v=MpcllLHg4jA"
@@ -16,18 +24,33 @@ sources:
 
 ## Quick answer
 
-**No redeemable Street Life Remastered code is confirmed on this page** (last full check aligned to September 2026 sources; page structure refreshed 2026-10-23). The official description does not advertise a redeem box. Numbers shared online as “codes” are usually **Roblox asset IDs**, not cash rewards. Use the free-reward steps below instead.
+**No working Street Life Remastered code, and no expired code, is confirmed on this page** (checked 2026-11-18). The live Roblox description still does not say “code” or “redeem.” Number strings shared online as “codes” are usually **Roblox asset IDs**, not cash rewards. Use the free-reward steps below instead.
+
+## Working codes
+
+| Code | Reward | Status |
+| --- | --- | --- |
+| None | — | No working code on the 2026-11-18 check |
+
+## Expired codes
+
+| Code | Status | Why it is not listed |
+| --- | --- | --- |
+| None on record | Not invented | Earnaldo (last checked 2026-11-10) says it has never recorded one. RBX Radar, followed since 2026-10-29, still reported zero codes on 2026-11-18. This page will not fill an expired table with asset IDs. |
 
 ## Verification status table
 
 | Check | Result | Date / source |
 | --- | --- | --- |
-| Official Roblox description mentions redeem codes? | Not in the text we read | Games API / listing, 2026-09-19 |
-| Working code published by a maintained tracker? | Earnaldo: none | Verified 2026-09-03, updated 2026-09-14 |
-| Badges look like code redeems? | No — 13 gameplay achievement badges | Badges API 2026-09-19; see [Badges](/achievements/street-life-remastered-badges) |
-| Any code listed as “Active” on this wiki? | **None** | This page |
+| Official description mentions a code or “redeem”? | No. Full description re-read. Experience `updated` was 2026-11-17T01:23:21.08Z | Games API, 2026-11-18 |
+| Developer virtual events include a code string? | No. All 16 public events were read, including the XMAS UPDATE booked to start 2026-12-01. That booking is not a code | Virtual events API, 2026-11-18 |
+| Group shout | Empty (`shout: null`). The group wall endpoint returned NotFound, so a wall post was not readable | Groups API, 2026-11-18 |
+| Working code on a maintained tracker? | None. Earnaldo 2026-11-10; RBX Radar 2026-11-18; UrGameTips 2026-11-05 | Tracker pages cited above |
+| Discord re-read this pass? | No. A code that exists only in Discord was not checked on 2026-11-18 | This page |
+| Badges look like code redeems? | No — still 13 gameplay badges, none named as a code | Badges API 2026-11-18; see [Badges](/achievements/street-life-remastered-badges) |
+| Any code listed as working or expired here? | **None** | This page |
 
-When a developer or an actively updated tracker posts a working code, this table gets a new row with the code spelling, reward, and expiry—not before.
+When a developer post or a tracker that shows a last-checked time publishes a real code, this page gets a row with the spelling, reward, and expiry. Not before.
 
 ## “Codes” people share vs real rewards
 
@@ -76,7 +99,9 @@ These are **not** redeem codes. Details: [Money methods](/money/street-life-rema
 
 ## Unconfirmed
 
-- Whether the developer will add a redeem system later.
+- Whether a redeem box exists in the live client. The description, the 16 events, and the trackers above do not show one. We did not open the client on 2026-11-18.
+- Whether a code was posted only in Discord or a group wall we could not read.
+- Whether the developer will add a redeem system for the XMAS UPDATE that starts 2026-12-01. The event text does not contain one.
 - Exact current group-reward dollar amounts after updates newer than Mix’s August 2026 video.
 
 ## Related pages
